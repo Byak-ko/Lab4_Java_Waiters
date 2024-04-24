@@ -2,11 +2,11 @@ import java.util.Objects;
 
 public class Fork {
     private String name;
-    private boolean taken; // додали змінну для відстеження стану вилки
+    private boolean taken; 
 
     public Fork(String name) {
         this.name = name;
-        this.taken = false; // початково вважаємо, що вилка не використовується
+        this.taken = false;
     }
 
     public String getName() {
@@ -17,11 +17,11 @@ public class Fork {
         this.name = name;
     }
 
-    public boolean isTaken() { // додали метод для перевірки стану вилки
+    public boolean isTaken() { 
         return taken;
     }
 
-    public void setTaken(boolean taken) { // додали метод для зміни стану вилки
+    public void setTaken(boolean taken) { 
         this.taken = taken;
     }
 
