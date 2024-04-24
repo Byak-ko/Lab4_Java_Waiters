@@ -9,7 +9,6 @@ public class Waiter {
         while (!isAvailable(leftFork, rightFork)) {
             wait();
         }
-        // Mark forks as taken
         leftFork.setTaken(true);
         rightFork.setTaken(true);
     }
@@ -17,7 +16,6 @@ public class Waiter {
     public synchronized void putDownForks(Fork leftFork, Fork rightFork) {
         leftFork.setTaken(false);
         rightFork.setTaken(false);
-        // Notify waiting philosophers that forks are available
         notifyAll();
     }
 
